@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply outline-none;
+}
+
+.input {
+    @apply
+        px-3 py-3 bg-stone-600 text-stone-300 font-medium outline-none w-full
+        border border-gray-400 focus:border-gray-200 focus:text-white
+    ;
+}
