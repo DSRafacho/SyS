@@ -2,13 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    @apply outline-none;
-}
 
 .input {
     @apply
-        px-3 py-3 bg-stone-600 text-stone-300 font-medium outline-none w-full
+        px-2 py-2 bg-stone-600 text-stone-300 font-medium outline-none w-full
         border border-gray-400 focus:border-gray-200 focus:text-white
+    ;
+}
+
+.title {
+    @apply
+        text-2xl font-bold text-left text-stone-300 mb-10 border-l-4 border-l-sky-600
+        pl-3
+    ;
+}
+
+
+.title-2 {
+    @apply
+        text-xl font-bold text-left text-stone-300 mb-10 border-l-4 border-l-sky-400
+        ml-3 pl-3
     ;
 }

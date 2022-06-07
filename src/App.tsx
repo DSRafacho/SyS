@@ -36,6 +36,7 @@ const Image: Component = () => (
     <h1>Image</h1>
   </div>
 )
+
 const Login: Component = () => (
   <div class='w-screen h-screen bg-stone-800'>
     <div class="flex flex-wrap">
@@ -60,7 +61,6 @@ const Home: Component = () => (
   </div>
 )
 
-
 const SideBar: Component = () => (
   <div class='w-20 h-screen bg-slate-500 md:flex flex-col justify-start items-center gap-8 p-2 hidden'>
     {/* <h1>Compras</h1>
@@ -69,7 +69,6 @@ const SideBar: Component = () => (
     <h1>Finanças</h1> */}
   </div>
 )
-
 
 const BottomBar: Component = () => (
   <div class='w-full h-12 absolute bottom-0 bg-slate-500 flex justify-center items-center p-2 gap-5 md:none md:hidden'>
@@ -80,11 +79,9 @@ const BottomBar: Component = () => (
   </div>
 )
 
-
 const Content: Component = () => (
   <div class='w-full h-screen bg-gray-900 p-5 pb-24'>
-    <h1>Content</h1>
-    <EstoqueForm />
+    <Outlet />
   </div>
 )
 
@@ -95,29 +92,29 @@ const EstoqueForm: Component = () => (
 
       <div class="w-full flex flex-row flex-wrap gap-5">
 
-        <div class="basis-1 md:basis-1/2">
+        <div class="basis-full md:basis-1/2">
           <label class="block text-white">Produto</label>
           <input type="text" class='input' placeholder='Produto' />
         </div>
 
-        <div class="basis-1 md:basis-1/5">
+        <div class="basis-full md:basis-1/5">
           <label class="block text-white">Unidade 1</label>
           <input type="text" class='input' placeholder='Produto' />
         </div>
 
-        <div class="basis-1 md:basis-1/5">
+        <div class="basis-full md:basis-1/5">
           <label class="block text-white">Quantidade</label>
           <input type="text" class='input' placeholder='Quantidade' />
         </div>
 
 
 
-        <div class="basis-1 md:basis-1/5">
+        <div class="basis-full md:basis-1/5">
           <label class="block text-white">Unidade 2</label>
           <input type="text" class='input' placeholder='Produto' />
         </div>
 
-        <div class="basis-1 md:basis-1/5">
+        <div class="basis-full md:basis-1/5">
           <label class="block text-white">Quantidade</label>
           <input type="text" class='input' placeholder='Quantidade' />
         </div>
@@ -129,12 +126,78 @@ const EstoqueForm: Component = () => (
   </div>
 )
 
+const ProdutoForm: Component = () => (
+  <div class='w-full h-full'>
+  <h1 class='title'>Informações Principais</h1>
+    <div class="w-full">
+
+      <div class="grid grid-cols-12 gap-5">
+
+        <div class="col-span-12 md:col-span-4">
+          <label class="block text-white">Código</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-8">
+          <label class="block text-white">Nome</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-3">
+          <label class="block text-white">Tipo</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-5">
+          <label class="block text-white">Estoque</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-4">
+          <label class="block text-white">Código de barras</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-3">
+          <label class="block text-white">Tipo de origem</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-3">
+          <label class="block text-white">Unidade</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-6">
+          <label class="block text-white">Preço</label>
+          <input type="text" class='input text-right' />
+        </div>
+
+      </div>
+
+      <h1 class='title-2 mt-8'>Impostos</h1>
+      <h1 class='title-2 mt-8'>Lógistica</h1>
+      <h1 class='title-2 mt-8'>Fotos</h1>
+      <h1 class='title-2 mt-8'>Vendas</h1>
+      <h1 class='title-2 mt-8'>Financeiro</h1>
+
+    </div>
+
+  </div>
+)
+
 const App: Component = () =>
 (
   <Router>
     <Routes>
       <Route path="/" element={<Login />} />
-      <Route path="/home" element={<Home />} />
+
+      <Route path="/app/*" element={<div class='w-full h-screen bg-gray-900 p-5 pb-24'><Outlet /></div>}> 
+        <Route path="home" element={<Home />} />
+        <Route path="produtos/cadastrar/" element={<ProdutoForm />} />
+        <Route path="/fornecedores" element={<Home />} />
+      </Route>
+
     </Routes>
   </Router>
 
