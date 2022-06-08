@@ -6,21 +6,32 @@
 .input {
     @apply
         px-2 py-2 bg-stone-600 text-stone-300 font-medium outline-none w-full
-        border border-gray-400 focus:border-gray-200 focus:text-white
-    ;
+        border border-gray-400 focus:border-gray-200 focus:text-white;
 }
 
 .title {
     @apply
         text-2xl font-bold text-left text-stone-300 mb-10 border-l-4 border-l-sky-600
-        pl-3
-    ;
+        pl-3;
 }
-
 
 .title-2 {
     @apply
         text-xl font-bold text-left text-stone-300 mb-10 border-l-4 border-l-sky-400
-        ml-3 pl-3
-    ;
+        ml-3 pl-3;
+}
+
+.btn {
+    @apply
+        px-4 py-2 bg-sky-600 text-gray-300 hover:text-gray-100 font-medium outline-none
+        w-1/12 border border-blue-400 focus:border-blue-200 rounded-md focus:text-white;
+}
+
+.inputs-container {
+    @apply
+        grid grid-cols-12 gap-5 mb-12;
+}
+
+.label {
+    @apply text-white block;
 }
