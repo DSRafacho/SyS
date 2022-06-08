@@ -145,47 +145,47 @@ const ProdutoForm: Component = () =>
     <div class="w-full">
       <div class="inputs-container">
 
-        <div class="col-span-12 md:col-span-4 lg:col-span-2">
+        <div class="col-span-12 md:col-span-4 lg:col-span-2 xl:col-span-2">
           <label class="label">Código</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-8 lg:col-span-5">
+        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
           <label class="label">Nome</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-3 lg:col-span-2">
+        <div class="col-span-12 md:col-span-3 lg:col-span-2 xl:col-span-2">
           <label class="label">Tipo</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-5 lg:col-span-3">
+        <div class="col-span-12 md:col-span-5 lg:col-span-3 xl:col-span-2">
           <label class="label">Estoque</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-4 lg:col-span-2">
+        <div class="col-span-12 md:col-span-4 lg:col-span-2 xl:col-span-2">
           <label class="label">Código de barras</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-3 lg:col-span-2">
+        <div class="col-span-12 md:col-span-3 lg:col-span-2 xl:col-span-2">
           <label class="label">Tipo de origem</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-3 lg:col-span-2">
+        <div class="col-span-12 md:col-span-3 lg:col-span-2 xl:col-span-1">
           <label class="label">Unidade</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-6 lg:col-span-2">
+        <div class="col-span-12 md:col-span-6 lg:col-span-2 xl:col-span-2">
           <label class="label">Preço</label>
           <input type="text" class='input text-right' />
         </div>
 
-        <div class="col-span-12 md:col-span-4 lg:col-span-2">
+        <div class="col-span-12 md:col-span-4 lg:col-span-2 xl:col-span-2">
           <label class="label">Filial</label>
           <input type="text" class='input text-right' />
         </div>
@@ -195,19 +195,19 @@ const ProdutoForm: Component = () =>
       <h1 class='title-2 mt-8'>Dados Adicionais</h1>
       <div class="inputs-container">
 
-        <div class="col-span-12 md:col-span-3 lg:col-span-2">
+        <div class="col-span-12 md:col-span-3 lg:col-span-2 xl:col-span-1">
           <label class="label">Unidade 2</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-5 lg:col-span-3">
+        <div class="col-span-12 md:col-span-5 lg:col-span-3 xl:col-span-2">
           <label class="label">Tipo Conversão</label>
           <select class='input'>
             <option selected></option>
           </select>
         </div>
 
-        <div class="col-span-12 md:col-span-4 lg:col-span-2">
+        <div class="col-span-12 md:col-span-4 lg:col-span-2 xl:col-span-2">
           <label class="label">Conversão</label>
           <input type="text" class='input' />
         </div>
@@ -217,32 +217,37 @@ const ProdutoForm: Component = () =>
       <h1 class='title-2 mt-8'>Lógistica</h1>
       <div class="inputs-container">
 
-        <div class="col-span-12 md:col-span-4 lg:col-span-2">
+        <div class="col-span-12 md:col-span-4 lg:col-span-2 xl:col-span-2">
           <label class="label">Comprimento</label>
           <input type="text" class='input text-right' />
         </div>
 
-        <div class="col-span-12 md:col-span-4 lg:col-span-2">
+        <div class="col-span-12 md:col-span-4 lg:col-span-2 xl:col-span-2">
           <label class="label">Altura</label>
           <input type="text" class='input text-right' />
         </div>
 
-        <div class="col-span-12 md:col-span-4 lg:col-span-2">
+        <div class="col-span-12 md:col-span-4 lg:col-span-2 xl:col-span-2">
           <label class="label">Largura</label>
           <input type="text" class='input text-right' />
         </div>
 
-        <div class="col-span-12 md:col-span-3 lg:col-span-">
+        <div class="col-span-12 md:col-span-3 lg:col-span- xl:col-span-2">
           <label class="label">Peso Liquído</label>
           <input type="text" class='input text-right' />
         </div>
 
-        <div class="col-span-12 md:col-span-3 lg:col-span-">
+        <div class="col-span-12 md:col-span-3 lg:col-span- xl:col-span-2">
           <label class="label">Peso Bruto</label>
           <input type="text" class='input text-right' />
         </div>
 
-        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+        <div class="col-span-12 md:col-span-3 lg:col-span- xl:col-span-2">
+          <label class="label">Quanidade por Embalagem</label>
+          <input type="text" class='input text-right' />
+        </div>
+
+        <div class="col-span-12 md:col-span-6 lg:col-span-3 xl:col-span-3">
           <label class="label">Quantidade Mínima de Estoque</label>
           <input type="text" class='input text-right' />
         </div>
