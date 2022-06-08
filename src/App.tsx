@@ -58,7 +58,10 @@ const Login: Component = () =>
 
 const Home: Component = () =>
 (
-  <div><h1 class='text-white'>Home</h1></div>
+  <div>
+    <h1 class='text-white'>Home</h1>
+    <Link href='produtos/cadastrar/'>Produtos</Link>
+  </div>
 )
 
 const SideBar: Component = () =>
@@ -130,6 +133,37 @@ const CrudButtons: Component = () =>
       {/* <button class="btn">Editar</button> */}
       {/* <button class="btn">Deletar</button> */}
       <button class="btn">Voltar</button>
+    </div>
+
+  </div>
+)
+
+const AgrupamentosForm: Component = () =>
+(
+  <div class='w-full h-full'>
+
+    <CrudButtons />
+    <h1 class='title'>Dados Principais</h1>
+
+    <div class="w-full">
+      <div class="inputs-container">
+
+        <div class="col-span-12 md:col-span-4 lg:col-span-2 xl:col-span-2">
+          <label class="label">Código</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+          <label class="label">Nome</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+          <label class="label">Filial</label>
+          <input type="text" class='input' />
+        </div>
+
+      </div>
     </div>
 
   </div>
@@ -273,15 +307,15 @@ const App: Component = () =>
       <Route path="/" element={<Login />} />
 
       <Route path="/app/*" element={
-        <div class='w-full h-screen overflow-y-auto bg-gray-900 pb-24'>
+        <div class='w-full h-screen overflow-y-auto bg-gray-900 pb-24 flex gap-0'>
+          <SideBar />
           <div class="p-5"><Outlet /></div>
-          {/* <SideBar /> */}
           <BottomBar />
         </div>
       }>
-        {/* <Route path='/' element={<Home />} /> */}
+        <Route path='/' element={<Home />} />
         <Route path="produtos/cadastrar/" element={<ProdutoForm />} />
-        <Route path="/fornecedores" element={<Home />} />
+        {/* <Route path="/fornecedores" element={<Home />} /> */}
       </Route>
 
     </Routes>
