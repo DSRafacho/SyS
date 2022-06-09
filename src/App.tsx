@@ -66,7 +66,7 @@ const Home: Component = () =>
 
 const SideBar: Component = () =>
 (
-  <div class='w-20 h-screen bg-slate-500 md:flex flex-col justify-start items-center gap-8 p-2 hidden'>
+  <div class='w-20 h-screen bg-slate-500 md:flex flex-col justify-center items-center gap-8 p-2 hidden'>
     <h1>Compras</h1>
     <h1>Vendas</h1>
     <h1>Vendas</h1>
@@ -138,6 +138,106 @@ const CrudButtons: Component = () =>
   </div>
 )
 
+const Form: Component = () =>
+(
+  <div class='w-full h-full'>
+
+    <CrudButtons />
+    <h1 class='title'>Dados Principais</h1>
+
+    <div class="w-full">
+      <div class="inputs-container">
+
+      </div>
+    </div>
+
+  </div>
+
+)
+const CompanyForm: Component = () =>
+(
+  <div class='w-full h-full'>
+
+    <CrudButtons />
+    <h1 class='title'>Dados Principais</h1>
+
+    <div class="w-full">
+      <div class="inputs-container">
+
+        <div class="col-span-12 md:col-span-4 lg:col-span-2 xl:col-span-2">
+          <label class="label">CNPJ</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+          <label class="label">Nome</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+          <label class="label">Nome Fantasia</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+          <label class="label">CEP</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+          <label class="label">Estado</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+          <label class="label">Cidade</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+          <label class="label">Bairro</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+          <label class="label">Rua</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+          <label class="label">Número</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+          <label class="label">Complemento</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+          <label class="label">Código IBGE</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+          <label class="label">Email</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+          <label class="label">Telefone</label>
+          <input type="text" class='input' />
+        </div>
+
+      </div>
+      <div class="h-48 col-span-12 md:col-span-6 lg:col-span-3 bg-stone-500" />
+
+
+    </div>
+
+  </div>
+)
+
 const AgrupamentosForm: Component = () =>
 (
   <div class='w-full h-full'>
@@ -156,6 +256,46 @@ const AgrupamentosForm: Component = () =>
         <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
           <label class="label">Nome</label>
           <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+          <label class="label">Filial</label>
+          <input type="text" class='input' />
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+)
+
+
+const SpentEntityForm: Component = () =>
+(
+  <div class='w-full h-full'>
+
+    <CrudButtons />
+    <h1 class='title'>Dados Principais</h1>
+
+    <div class="w-full">
+      <div class="inputs-container">
+
+        <div class="col-span-12 md:col-span-4 lg:col-span-2 xl:col-span-2">
+          <label class="label">Código</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+          <label class="label">Nome</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-5 lg:col-span-3 xl:col-span-2">
+          <label class="label">Tipo Conversão</label>
+          <select class='input'>
+            <option selected>Multiplicar</option>
+            <option>Dividir</option>
+          </select>
         </div>
 
         <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
@@ -237,7 +377,8 @@ const ProdutoForm: Component = () =>
         <div class="col-span-12 md:col-span-5 lg:col-span-3 xl:col-span-2">
           <label class="label">Tipo Conversão</label>
           <select class='input'>
-            <option selected></option>
+            <option selected>Multiplicar</option>
+            <option selected>Dividir</option>
           </select>
         </div>
 
@@ -315,7 +456,8 @@ const App: Component = () =>
       }>
         <Route path='/' element={<Home />} />
         <Route path="produtos/cadastrar/" element={<ProdutoForm />} />
-        {/* <Route path="/fornecedores" element={<Home />} /> */}
+        <Route path="entidade-gastos/cadastrar/" element={<SpentEntityForm />} />
+        <Route path="empresas/cadastrar/" element={<CompanyForm />} />
       </Route>
 
     </Routes>
