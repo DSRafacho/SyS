@@ -56,35 +56,57 @@ const Login: Component = () =>
   </div>
 )
 
+const Grid: Component = () =>
+(
+  <div>
+
+  </div>
+)
 const Home: Component = () =>
 (
   <div>
-    <h1 class='text-white'>Home</h1>
-    <Link href='produtos/cadastrar/'>Produtos</Link>
+    <h1 class='text-white'>Home</h1><br /><br />
+    <Link href='produtos/cadastrar/' class='text-white'>Produtos</Link> <br />
+    <Link href='empresas/cadastrar/' class='text-white'>Empresas</Link> <br />
+    <Link href='agrupamentos1/cadastrar/' class='text-white'>Agrupamentos1</Link> <br />
+    <Link href='agrupamentos2/cadastrar/' class='text-white'>Agrupamentos2</Link> <br />
+    <Link href='agrupamentos3/cadastrar/' class='text-white'>Agrupamentos3</Link> <br />
+    <Link href='agrupamentos4/cadastrar/' class='text-white'>Agrupamentos4</Link> <br />
+    <Link href='agrupamentos5/cadastrar/' class='text-white'>Agrupamentos5</Link> <br /> <br />
+
+    <Link href='entidades1/cadastrar/' class='text-white'>Entidade1</Link> <br />
+    <Link href='entidades2/cadastrar/' class='text-white'>Entidade2</Link> <br />
+    <Link href='entidades3/cadastrar/' class='text-white'>Entidade3</Link> <br />
+    <Link href='entidades4/cadastrar/' class='text-white'>Entidade4</Link> <br /> <br />
+
+    <Link href='tabelas-preco/cadastrar/' class='text-white'>Tabelas de Preço</Link> <br />
+    <Link href='inventarios/cadastrar/' class='text-white'>Inventários</Link> <br /><br />
+
+    <Grid />
   </div>
 )
 
 const SideBar: Component = () =>
 (
-  <div class='w-20 h-screen bg-slate-500 md:flex flex-col justify-center items-center gap-8 p-2 hidden'>
-    <h1>Compras</h1>
+  <div class='w-24 h-screen bg-slate-500 md:flex flex-col justify-center items-center gap-8 p-2 hidden'>
+    {/* <h1>Compras</h1>
     <h1>Vendas</h1>
     <h1>Vendas</h1>
-    <h1>Finanças</h1>
+    <h1>Finanças</h1> */}
   </div>
 )
 
 const BottomBar: Component = () =>
 (
   <div class='w-full h-12 absolute bottom-0 bg-slate-500 flex justify-center items-center p-2 gap-5 md:none md:hidden'>
-    <h1>Compras</h1>
+    {/* <h1>Compras</h1>
     <h1>Vendas</h1>
     <h1>Vendas</h1>
-    <h1>Finanças</h1>
+    <h1>Finanças</h1> */}
   </div>
 )
 
-const EstoqueForm: Component = () =>
+const InventoryForm: Component = () =>
 (
   <div class='w-full h-full'>
 
@@ -118,9 +140,7 @@ const EstoqueForm: Component = () =>
         </div>
 
       </div>
-
     </div>
-
   </div>
 )
 
@@ -132,7 +152,7 @@ const CrudButtons: Component = () =>
       {/* <button class="btn">Salvar</button> */}
       {/* <button class="btn">Editar</button> */}
       {/* <button class="btn">Deletar</button> */}
-      <button class="btn">Voltar</button>
+      <Link href='/app/' class='btn'>Voltar</Link> <br />
     </div>
 
   </div>
@@ -164,67 +184,67 @@ const CompanyForm: Component = () =>
     <div class="w-full">
       <div class="inputs-container">
 
-        <div class="col-span-12 md:col-span-4 lg:col-span-2 xl:col-span-2">
+        <div class="col-span-12 md:col-span-4 lg:col-span-3 xl:col-span-2">
           <label class="label">CNPJ</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+        <div class="col-span-12 md:col-span-8 lg:col-span-4 xl:col-span-4">
           <label class="label">Nome</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+        <div class="col-span-12 md:col-span-9 lg:col-span-5 xl:col-span-4">
           <label class="label">Nome Fantasia</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+        <div class="col-span-12 md:col-span-3 lg:col-span-2 xl:col-span-4">
           <label class="label">CEP</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+        <div class="col-span-12 md:col-span-3 lg:col-span-3 xl:col-span-4">
           <label class="label">Estado</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+        <div class="col-span-12 md:col-span-5 lg:col-span-4 xl:col-span-4">
           <label class="label">Cidade</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+        <div class="col-span-12 md:col-span-4 lg:col-span-3 xl:col-span-4">
           <label class="label">Bairro</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+        <div class="col-span-12 md:col-span-5 lg:col-span-4 xl:col-span-4">
           <label class="label">Rua</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+        <div class="col-span-12 md:col-span-2 lg:col-span-2 xl:col-span-4">
           <label class="label">Número</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+        <div class="col-span-12 md:col-span-5 lg:col-span-4 xl:col-span-4">
           <label class="label">Complemento</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+        <div class="col-span-12 md:col-span-4 lg:col-span-2 xl:col-span-4">
           <label class="label">Código IBGE</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+        <div class="col-span-12 md:col-span-5 lg:col-span-4 xl:col-span-4">
           <label class="label">Email</label>
           <input type="text" class='input' />
         </div>
 
-        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
+        <div class="col-span-12 md:col-span-3 lg:col-span-3 xl:col-span-4">
           <label class="label">Telefone</label>
           <input type="text" class='input' />
         </div>
@@ -238,7 +258,60 @@ const CompanyForm: Component = () =>
   </div>
 )
 
-const AgrupamentosForm: Component = () =>
+
+const PriceListForm: Component = () =>
+(
+  <div class='w-full h-full'>
+
+    <CrudButtons />
+    <h1 class='title'>Dados Principais</h1>
+
+    <div class="w-full">
+      <div class="inputs-container">
+
+        <div class="col-span-12 md:col-span-3 lg:col-span-2 xl:col-span-2">
+          <label class="label">Código</label>
+          <input type="text" class='input' />
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+)
+
+const GroupingForm: Component = () =>
+(
+  <div class='w-full h-full'>
+
+    <CrudButtons />
+    <h1 class='title'>Dados Principais</h1>
+
+    <div class="w-full">
+      <div class="inputs-container">
+
+        <div class="col-span-12 md:col-span-3 lg:col-span-2 xl:col-span-2">
+          <label class="label">Código</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-9 lg:col-span-5 xl:col-span-4">
+          <label class="label">Nome</label>
+          <input type="text" class='input' />
+        </div>
+
+        <div class="col-span-12 md:col-span-4 lg:col-span-3 xl:col-span-2">
+          <label class="label">Filial</label>
+          <input type="text" class='input' />
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+)
+
+const UserForm: Component = () =>
 (
   <div class='w-full h-full'>
 
@@ -249,17 +322,12 @@ const AgrupamentosForm: Component = () =>
       <div class="inputs-container">
 
         <div class="col-span-12 md:col-span-4 lg:col-span-2 xl:col-span-2">
-          <label class="label">Código</label>
+          <label class="label">Email</label>
           <input type="text" class='input' />
         </div>
 
         <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
           <label class="label">Nome</label>
-          <input type="text" class='input' />
-        </div>
-
-        <div class="col-span-12 md:col-span-8 lg:col-span-5 xl:col-span-4">
-          <label class="label">Filial</label>
           <input type="text" class='input' />
         </div>
 
@@ -448,9 +516,9 @@ const App: Component = () =>
       <Route path="/" element={<Login />} />
 
       <Route path="/app/*" element={
-        <div class='w-full h-screen overflow-y-auto bg-gray-900 pb-24 flex gap-0'>
+        <div class='w-full h-screen bg-gray-900 pb-24 md:pb-5 flex gap-0'>
           <SideBar />
-          <div class="p-5"><Outlet /></div>
+          <div class="p-5 overflow-y-auto"><Outlet /></div>
           <BottomBar />
         </div>
       }>
@@ -458,6 +526,12 @@ const App: Component = () =>
         <Route path="produtos/cadastrar/" element={<ProdutoForm />} />
         <Route path="entidade-gastos/cadastrar/" element={<SpentEntityForm />} />
         <Route path="empresas/cadastrar/" element={<CompanyForm />} />
+
+        <Route path="entidades1/cadastrar/" element={<SpentEntityForm />} />
+        <Route path="agrupamentos1/cadastrar/" element={<GroupingForm />} />
+
+        <Route path="tabelas-preco/cadastrar/" element={<PriceListForm />} />
+        <Route path="inventarios/cadastrar/" element={<InventoryForm />} />
       </Route>
 
     </Routes>
